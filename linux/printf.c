@@ -9,6 +9,6 @@ int main(int argc, char *argv[])
     printf("de\n");
     printf("de\n");
     int x = 10;
-    printf("print a int type:%d\n", x);
+    printf("print a int type:x=%d\n", x);
     return 0;
 }
