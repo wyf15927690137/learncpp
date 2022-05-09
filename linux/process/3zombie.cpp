@@ -15,9 +15,9 @@ int main()
 
     if (ret == 0) // here,son process will execute
     {
-        cout << "my pid id: " << getpid() << " my father pid id: " << getppid() << endl;
+        cout << "this is son process,and ID is: " << getpid() << ",and ppid is: " << getppid() << endl;
     }
-    if (ret < 0)
+    else if (ret < 0)
     {
         return 0;
     }
@@ -26,7 +26,8 @@ int main()
         // when son process returned, father process won't terminate and reclaim the resources of son process, a zombie process emerged.
         while (1) // father process will execute
         {
-            cout << "my pid id: " << getpid() << " my father pid id: " << getppid() << endl;
+            // ps aux | grep megbin : view and target the zombie process.
+            cout << "this is father process,and ID is: " << getppid() << ",and ppid is: " << getppid() << endl;
             sleep(1);
         }
     }
